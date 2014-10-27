@@ -1,0 +1,26 @@
+<head>
+  <title>Utuspaces</title>
+</head>
+ 
+<body>
+  <h1>Utuspaces</h1>
+  {{> welcome }}
+  {{> messages }}
+  {{> input }}
+</body>
+ 
+<template name="welcome">
+  <p>
+    Welcome to the example chat app! Please log in to show your username.
+  </p>
+</template>
+
+<template name="messages">
+	{{#each messages}}
+	<strong>{{name}}:</strong>{{message}}<br>
+	{{/each}}
+</template>
+
+<template name="input">
+	<p>Message: <input type="text" id="message"></p>
+</template>
