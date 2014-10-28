@@ -1,0 +1,11 @@
+body{
+	padding-top: 100px;
+}
+
+.mygrid-wrapper-div {
+    border: solid gray 1px;
+    border-radius:2px;
+    overflow: scroll;
+    height: 400px;
+    background: green;
+}

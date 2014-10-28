@@ -3,15 +3,27 @@
 </head>
  
 <body>
-  <h1>Utuspaces</h1>
-  {{> welcome }}
+ <div class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/"> Utuspaces</a>
+          <ul class="nav pull-right">
+          </ul>
+        </div>
+      </div>
+</div>
+<!--{{> navigation }}-->
+ 
+  
+  {{> welcome }} {{> input }}
+  <div class="mygrid-wrapper-div">
   {{> messages }}
-  {{> input }}
+  </div>
 </body>
  
 <template name="welcome">
   <p>
-    Welcome to the example chat app! Please log in to show your username.
+    Welcome to Utuspaces - Sign in using Facebook. 
   </p>
 </template>
 
@@ -23,4 +35,14 @@
 
 <template name="input">
 	<p>Message: <input type="text" id="message"></p>
+</template>
+
+<template name="navigation">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Utuspaces</a>
+        </div>    
+    </div>
+  </div>
 </template>
