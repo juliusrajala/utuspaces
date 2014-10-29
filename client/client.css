@@ -1,11 +1,60 @@
 body{
-	padding-top: 100px;
+	padding-top: 70px;
+	background:#E74C3C;
+	width:100%;
 }
 
+#tasks{
+	height:300px;
+}
+#chatti{
+	width: 100%;
+    padding-left: -50px;
+    background: #2C3E50;
+}
 .mygrid-wrapper-div {
-    border: solid gray 1px;
-    border-radius:2px;
+    padding-left: 30px;
     overflow: scroll;
     height: 400px;
-    background: green;
+    color:#ECF0F1;
+    width: 105%;
 }
+
+.nav pull-right{
+	color:#E6E6E6;
+}
+
+html {
+    padding: 10px;
+    font-family: Verdana, sans-serif;
+}
+ 
+.login-buttons-dropdown-align-right {
+    float: right;
+}
+
+#templateColumns{
+            width:100% !important;
+        }
+
+        .templateColumnContainer{
+            display:block !important;
+            width:100% !important;
+        }
+
+        .columnImage{
+            height:auto !important;
+            max-width:480px !important;
+            width:100% !important;
+        }
+
+        .leftColumnContent{
+            font-size:16px !important;
+            line-height:125% !important;
+        }
+
+        .rightColumnContent{
+            font-size:16px !important;
+            line-height:125% !important;
+        }
+        
