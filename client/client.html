@@ -3,54 +3,8 @@
 </head>
  
 <body>
- <div class="navbar navbar-fixed-top navbar-default">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="/"> Utuspaces</a>
-          <ul class="nav pull-right">
-          {{> loginButtons align="right"}}
-          </ul>
-        </div>
-      </div>
-</div>
+ {{> header}}
 
-<div id="tasks">
-<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateColumns">
-    <tr>
-        <td align="center" valign="top" width="50%" class="templateColumnContainer">
-            <table border="0" cellpadding="10" cellspacing="0" width="100%">
-                <tr>
-                    <td class="leftColumnContent">
-                        <img src="http://placekitten.com/g/280/300" class="columnImage" />
-                    </td>
-                </tr>
-                <tr>
-                    <td valign="top" class="leftColumnContent">
-                        <h1>Left Column</h1>
-                        Lorem ipsum dolor sit amet.
-                    </td>
-                </tr>
-            </table>
-        </td>
-        <td align="center" valign="top" width="50%" class="templateColumnContainer">
-            <table border="0" cellpadding="10" cellspacing="0" width="100%">
-                <tr>
-                    <td class="rightColumnContent">
-                        <img src="http://placekitten.com/g/280/300" class="columnImage" />
-                    </td>
-                </tr>
-                <tr>
-                    <td valign="top" class="rightColumnContent">
-                        <h1>Right Column</h1>
-                        Lorem ipsum dolor sit amet.
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>
-</div>
-  
   {{> welcome }} {{> input }}
   <div id="chatti">
   <div class="mygrid-wrapper-div">
@@ -72,6 +26,50 @@
 </template>
 
 <template name="input">
-	<p>Message: <input type="text" id="message"></p>
+	<p>Message: <input type="text" style="vertical-align:middle" id="message"></p>
 </template>
 
+<template name="header">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <div class="nav pull-right">
+          {{> user_info}}
+          </div>
+        </div>
+      </div>
+</div>
+</template>
+
+<template name="user_info">
+	<ul class="nav pull-right">
+	{{#if currentUser}}
+		{{> user_loggedin}}
+	{{else}}
+		{{> user_loggedout}}
+	{{/if}}
+	</ul>
+</template>
+
+<template name="user_loggedin">
+	{{#if loggingIn}}
+	<li><a>Logging in...</a></li>
+	{{else}}
+	<li><img class="img-rounded" style="height:32px; margin-top:4px;" src="{{currentUser.profile.avatar_url}}"/></li>
+	<li class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		{{currentUser.profile.name}}
+		<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+		<li><a>Account settings</a></li>
+		<li class="divider"></li>
+		<li><a id="logout">Logout</a></li>
+		</ul>
+	</li>
+	{{/if}}
+</template>
+
+<template name="user_loggedout">
+	<li><a id="login">Login with Github</a></li>
+</template>

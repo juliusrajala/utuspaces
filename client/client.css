@@ -1,60 +1,34 @@
 body{
 	padding-top: 70px;
-	background:#E74C3C;
+	background:#3498db;
 	width:100%;
 }
 
 #tasks{
 	height:300px;
 }
+#message{
+	border: 0px;
+	border-radius: 2px;
+}
 #chatti{
 	width: 100%;
     padding-left: -50px;
     background: #2C3E50;
+    font-size: 12px;
 }
 .mygrid-wrapper-div {
-    padding-left: 30px;
+    padding-left: 10px;
     overflow: scroll;
     height: 400px;
     color:#ECF0F1;
-    width: 105%;
+    width: 100%;
 }
 
-.nav pull-right{
-	color:#E6E6E6;
-}
-
-html {
-    padding: 10px;
-    font-family: Verdana, sans-serif;
-}
- 
 .login-buttons-dropdown-align-right {
     float: right;
 }
 
-#templateColumns{
-            width:100% !important;
-        }
-
-        .templateColumnContainer{
-            display:block !important;
-            width:100% !important;
-        }
-
-        .columnImage{
-            height:auto !important;
-            max-width:480px !important;
-            width:100% !important;
-        }
-
-        .leftColumnContent{
-            font-size:16px !important;
-            line-height:125% !important;
-        }
-
-        .rightColumnContent{
-            font-size:16px !important;
-            line-height:125% !important;
-        }
-        
+.nav pull-right{
+	color: black;
+}
